@@ -15,7 +15,7 @@ import {HomePage} from "../pages/home/home";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // make HelloIonicPage the root (or first) page
+  // make HomePage the root (or first) page
   rootPage = HomePage;
   pages: Array<{title: string, component: any}>;
 
