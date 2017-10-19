@@ -4,6 +4,7 @@
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
+$images-path: '../assets/images/';
 
 
 // The app direction is used to include
@@ -86,3 +87,15 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+// Defines stars background variables.
+$starFieldWidth: 2560;
+$starFieldHeight: 2560;
+$starStartOffset: 600px;
+$starOneScrollDuration: 100s;
+$starTwoScrollDuration: 125s;
+$starThreeScrollDuration: 175s;
+$numStarOneStars: 1700;
+$numStarTwoStars: 700;
+$numStarThreeStars: 200;
+$numShootingStars: 10;
