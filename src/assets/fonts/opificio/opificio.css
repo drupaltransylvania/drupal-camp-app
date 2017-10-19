@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Opificio';
+  src: url('opificio.eot');
+  src: url('opificio.eot') format('embedded-opentype'),
+  url('opificio.woff') format('woff'),
+  url('opificio.ttf') format('truetype'),
+  url('opificio.svg#Opificio') format('svg');
+}
