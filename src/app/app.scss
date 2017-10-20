@@ -59,12 +59,8 @@ html {
   }
   .text {
     color: #FFF;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    margin: -10px -75px 0 0;
-    font-size: 20px;
-    font-family: sans-serif;
+    font-size: 15px;
+    font-family: "Roboto";
     font-weight: bold;
   }
 }
@@ -173,4 +169,8 @@ html {
     position: relative;
     bottom: -5px;
   }
+}
+
+ion-content {
+  z-index: 100;
 }
