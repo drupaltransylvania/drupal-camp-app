@@ -5,6 +5,17 @@ page-home{
   }
   .bats {
     position: absolute;
-    top: 0;
+    top: 25px;
+  }
+}
+
+ion-grid.text.grid {
+  margin: 5%;
+  width: 90%;
+  ion-col {
+    text-align: center;
+    img {
+      width: 30%;
+    }
   }
 }
