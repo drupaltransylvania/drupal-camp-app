@@ -1,4 +1,4 @@
-page-home{
+page-home {
   .homepage-header {
     width: 50%;
     margin: 10% 0 0 25%;
@@ -17,5 +17,11 @@ ion-grid.text.grid {
     img {
       width: 30%;
     }
+  }
+}
+
+.container {
+  .content {
+    //z-index: 20;
   }
 }

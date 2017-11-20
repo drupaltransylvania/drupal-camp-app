@@ -2,11 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {HomePage} from "../pages/home/home";
+import {NewsPage} from "../pages/news/news";
 
 
 @Component({
@@ -30,7 +30,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'DrupalCamp Transylvania', component: HomePage },
-      { title: 'My First List', component: ListPage }
+      { title: 'News', component: NewsPage }
     ];
   }
 

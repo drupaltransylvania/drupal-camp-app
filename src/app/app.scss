@@ -66,12 +66,22 @@ html {
 }
 
 .menu-inner {
-  .content.content-md, .content.content-ios{
+  .content.content-md, .content.content-ios {
     background-color: inherit;
   }
-  button.item{
-    background-color: rgba(50,16,30, 1);
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border: none;
+  }
+  .list-ios > .item-block:last-child .item-inner, .list-ios > .item-wrapper:last-child .item-block .item-inner {
+    border-bottom: 0.55px solid rgba(200, 199, 204, 0.25);
+  }
+  button.item {
+    background-color: rgba(50, 16, 30, 1);
     color: #fff;
+    .item-inner {
+      padding: 15px 0px 15px 16px;
+      border-bottom: 0.55px solid rgba(200, 199, 204, 0.25);
+    }
   }
 }
 
@@ -171,6 +181,81 @@ html {
   }
 }
 
-ion-content {
-  z-index: 100;
+ion-footer {
+  z-index: 0;
+}
+
+page-home {
+  .homepage-header {
+    width: 50%;
+    margin: 10% 0 0 25%;
+  }
+  .bats {
+    position: absolute;
+    top: 25px;
+  }
+}
+
+ion-grid.text.grid {
+  margin: 5%;
+  width: 90%;
+  ion-col {
+    text-align: center;
+    img {
+      width: 30%;
+    }
+  }
+}
+
+ion-navbar {
+  button.back-button {
+    .button-inner {
+      color: white;
+      font-family: Opificio;
+    }
+  }
+}
+
+ion-list.list {
+  ion-card.item {
+    background-color: transparent;
+    padding-left: 0px;
+    margin: 0% 5%;
+    width: 90%;
+    box-shadow: none;
+    ion-label.label {
+      margin-right: 0px;
+      white-space: unset;
+      img {
+        height: 100px;
+      }
+    }
+    .item-inner {
+      padding-right: 0px;
+      border-bottom: none;
+    }
+    ion-card-content {
+      background-color: rgba(255, 255, 255, 0.8);
+      button {
+        height: 2.0em;
+      }
+      ion-card-title {
+        font-weight: bold;
+      }
+    }
+    p {
+      color: #0f0308;
+    }
+  }
+}
+
+.container ion-content.content {
+  margin: 0px;
+  .scroll-content {
+    margin-top: 44px;
+  }
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+  border-bottom: none;
 }
