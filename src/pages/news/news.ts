@@ -1,7 +1,11 @@
 import {Component} from '@angular/core';
-import {NavController} from "ionic-angular";
+import {IonicPage, NavController} from "ionic-angular";
 import {NewsDetailsPage} from "../news-details/news-details";
 
+@IonicPage({
+    name: 'news-page',
+    segment: 'news'
+})
 @Component({
     selector: 'page-news',
     templateUrl: 'news.html'
@@ -33,8 +37,8 @@ export class NewsPage {
     }
 
     newsTapped(event, item) {
-        this.navCtrl.push(NewsDetailsPage, {
-            item: item
+        this.navCtrl.push('news-details-page', {
+            'id': item.id
         });
     }
 

@@ -1,7 +1,10 @@
 import {Component} from '@angular/core';
-import {NavController} from "ionic-angular";
-import {NewsPage} from "../news/news";
+import {IonicPage, NavController} from "ionic-angular";
 
+@IonicPage({
+    name: 'home-page',
+    segment: 'home'
+})
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
@@ -26,14 +29,6 @@ export class HomePage {
      *  The page to navigate to.
      */
     goToPage(event, page) {
-        switch (page) {
-            case 'NewsPage':
-                page = NewsPage;
-                break;
-
-            default:
-                break;
-        }
         this.navCtrl.push(page);
     }
 }

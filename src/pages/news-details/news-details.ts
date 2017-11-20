@@ -1,11 +1,12 @@
-import {Component, Directive} from '@angular/core';
-import {NavController, NavParams} from "ionic-angular";
-import {Sharebar} from "../components/sharebar";
-
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from "ionic-angular";
+@IonicPage({
+    name: 'news-details-page',
+    segment: 'news/:id'
+})
 @Component({
     selector: 'page-news-details',
     templateUrl: 'news-details.html',
-    directives: [Sharebar]
 })
 
 export class NewsDetailsPage {

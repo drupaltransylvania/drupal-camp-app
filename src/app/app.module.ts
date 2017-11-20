@@ -1,6 +1,9 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule, ErrorHandler} from '@angular/core';
-import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
+import {
+    IonicApp, IonicModule, IonicErrorHandler,
+    IonicPageModule
+} from 'ionic-angular';
 import {MyApp} from './app.component';
 
 import {HomePage} from '../pages/home/home';
@@ -10,7 +13,6 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {NewsPage} from "../pages/news/news";
 import {NewsDetailsPage} from "../pages/news-details/news-details";
 import {SocialSharing} from "@ionic-native/social-sharing";
-import {Sharebar} from "../pages/components/sharebar";
 
 @NgModule({
     declarations: [
@@ -21,7 +23,12 @@ import {Sharebar} from "../pages/components/sharebar";
     ],
     imports: [
         BrowserModule,
-        IonicModule.forRoot(MyApp),
+        IonicModule.forRoot(MyApp, {
+            preloadModules: true,
+        }),
+        IonicPageModule.forChild(HomePage),
+        IonicPageModule.forChild(NewsPage),
+        IonicPageModule.forChild(NewsDetailsPage)
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -29,13 +36,11 @@ import {Sharebar} from "../pages/components/sharebar";
         HomePage,
         NewsPage,
         NewsDetailsPage,
-        Sharebar,
     ],
     providers: [
         StatusBar,
         SplashScreen,
         SocialSharing,
-        Sharebar,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
     ]
 })
