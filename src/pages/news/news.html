@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar hideBackButton="true">
-        <button ion-button menuToggle>
+        <button ion-button (tap)="goToPage(event, 'home-page')">
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>News</ion-title>

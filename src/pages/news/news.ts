@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController} from "ionic-angular";
-import {NewsDetailsPage} from "../news-details/news-details";
 
 @IonicPage({
     name: 'news-page',
@@ -12,7 +11,7 @@ import {NewsDetailsPage} from "../news-details/news-details";
 })
 export class NewsPage {
 
-    news: Array<{ title: string, description: string, short_description: string, image: string }>;
+    news: Array<{ id: number, title: string, description: string, short_description: string, image: string }>;
 
     /**
      * Constructor for HomePage.
@@ -25,6 +24,7 @@ export class NewsPage {
 
         for (let i = 1; i < 12; i++) {
             this.news.push({
+                id: i,
                 title: 'Venue revealed',
                 description: 'Great companies and their talented employees deserve the best. The Office provides far more than just excellent offices: it is a business city inside the city, in a fresh environment, space where business objectives are met, providing ground for expansion.\n' +
                 '\n' +
@@ -38,8 +38,21 @@ export class NewsPage {
 
     newsTapped(event, item) {
         this.navCtrl.push('news-details-page', {
-            'id': item.id
+            'id': item.id,
+            'selectedItem': item
         });
+    }
+
+    /**
+     * Navigates to a page.
+     *
+     * @param event
+     *  The event.
+     * @param page
+     *  The page to navigate to.
+     */
+    goToPage(event, page) {
+        this.navCtrl.push(page);
     }
 
 }

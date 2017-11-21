@@ -36,6 +36,14 @@ html {
   .bar-button-menutoggle {
     color: #f1f1f1;
   }
+  .toolbar-content {
+    button.button {
+      background-color: transparent;
+      .icon {
+        font-size: 1.6em;
+      }
+    }
+  }
 }
 
 .container {

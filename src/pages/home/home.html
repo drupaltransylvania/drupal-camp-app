@@ -1,6 +1,6 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
+    <ion-navbar hideBackButton="true">
+        <button ion-button>
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>DrupalCamp Transylvania</ion-title>
@@ -25,7 +25,7 @@
         </div>
         <ion-grid class="text">
             <ion-row>
-                <ion-col (tap)="goToPage($event, 'news')">
+                <ion-col (tap)="goToPage($event, 'news-page')">
                     <img src="assets/icon/svg/newspaper-text.svg">
                     <p>News</p>
                 </ion-col>
