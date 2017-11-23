@@ -1,4 +1,4 @@
-import {NgModule, OnInit} from "@angular/core";
+import {NgModule} from "@angular/core";
 import {Sharebar} from "./sharebar";
 
 @NgModule({

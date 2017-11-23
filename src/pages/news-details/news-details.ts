@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from "ionic-angular";
-import {Sharebar} from "../components/sharebar/sharebar";
 
 @IonicPage({
     name: 'news-details-page',
@@ -9,10 +8,7 @@ import {Sharebar} from "../components/sharebar/sharebar";
 })
 @Component({
     selector: 'page-news-details',
-    templateUrl: 'news-details.html',
-    entryComponents: [
-        Sharebar
-    ]
+    templateUrl: 'news-details.html'
 })
 export class NewsDetailsPage {
 
