@@ -1,0 +1,12 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  img {
+    position: relative;
+    bottom: -5px;
+  }
+}
+
+ion-footer {
+  z-index: 0;
+}

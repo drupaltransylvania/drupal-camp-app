@@ -1,21 +1,21 @@
 import {NgModule} from "@angular/core";
-import {Sharebar} from "./sharebar";
+import {Stars} from "./stars";
 
 @NgModule({
     declarations: [
-        Sharebar,
+        Stars,
     ],
     imports: [],
     entryComponents: [
-        Sharebar
+        Stars,
     ],
     exports: [
-        Sharebar
+        Stars,
     ]
 })
 /**
- * Defines sharebar module.
+ * Defines stars module.
  */
-export class SharebarModule{
+export class StarsModule {
 
 }

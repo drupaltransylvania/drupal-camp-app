@@ -2,6 +2,7 @@ import {NgModule} from "@angular/core";
 import {HomePage} from "./home";
 import {IonicPageModule} from "ionic-angular";
 import {FooterModule} from "../../components/footer/footer.module";
+import {StarsModule} from "../../components/stars/stars.module";
 
 @NgModule({
     declarations: [
@@ -9,7 +10,8 @@ import {FooterModule} from "../../components/footer/footer.module";
     ],
     imports: [
         IonicPageModule.forChild(HomePage),
-        FooterModule
+        FooterModule,
+        StarsModule,
     ],
     entryComponents: [
         HomePage
