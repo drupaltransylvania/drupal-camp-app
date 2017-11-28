@@ -7,10 +7,10 @@ import {IonicModule} from "ionic-angular";
         Sharebar,
     ],
     imports: [
-        IonicModule.forRoot(Sharebar)
+        IonicModule.forRoot(Sharebar),
     ],
     entryComponents: [
-        Sharebar
+        Sharebar,
     ],
     exports: [
         Sharebar

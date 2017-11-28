@@ -9,6 +9,9 @@ import {IonicPage, NavController} from "ionic-angular";
     selector: 'page-home',
     templateUrl: 'home.html'
 })
+/**
+ * Defines the hompage.
+ */
 export class HomePage {
 
     /**

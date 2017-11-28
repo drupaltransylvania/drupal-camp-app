@@ -9,8 +9,14 @@ import {IonicPage, NavController} from "ionic-angular";
     selector: 'page-news',
     templateUrl: 'news.html'
 })
+/**
+ * Defines news listing page.
+ */
 export class NewsPage {
 
+    /**
+     * Defines a new.
+     */
     news: Array<{ id: number, title: string, description: string, short_description: string, image: string }>;
 
     /**
@@ -36,6 +42,14 @@ export class NewsPage {
         }
     }
 
+    /**
+     * Redirects to news detail page when a piece of news is tapped.
+     *
+     * @param event
+     *   The tap event.
+     * @param item
+     *   The piece of new.
+     */
     newsTapped(event, item) {
         this.navCtrl.push('news-details-page', {
             'id': item.id,
