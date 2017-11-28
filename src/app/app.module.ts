@@ -20,6 +20,8 @@ import {HomePageModule} from "../pages/home/home.module";
         BrowserModule,
         IonicModule.forRoot(MyApp, {
             preloadModules: true,
+            mode: "md",
+            backButtonText: 'Go Back',
         }),
         HomePageModule,
     ],

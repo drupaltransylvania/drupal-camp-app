@@ -14,7 +14,7 @@ import {StarsModule} from "../../components/stars/stars.module";
         StarsModule,
     ],
     entryComponents: [
-        HomePage
+        HomePage,
     ]
 })
 export class HomePageModule {

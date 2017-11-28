@@ -1,11 +1,14 @@
 import {NgModule} from "@angular/core";
 import {Sharebar} from "./sharebar";
+import {IonicModule} from "ionic-angular";
 
 @NgModule({
     declarations: [
         Sharebar,
     ],
-    imports: [],
+    imports: [
+        IonicModule.forRoot(Sharebar)
+    ],
     entryComponents: [
         Sharebar
     ],

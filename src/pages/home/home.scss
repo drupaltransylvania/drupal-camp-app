@@ -7,6 +7,9 @@ page-home {
     position: absolute;
     top: 25px;
   }
+  ion-navbar.toolbar ion-title {
+    width: 100%;
+  }
 }
 
 ion-grid.text.grid {
@@ -25,3 +28,4 @@ ion-grid.text.grid {
     //z-index: 20;
   }
 }
+

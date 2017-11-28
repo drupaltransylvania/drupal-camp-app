@@ -1,11 +1,14 @@
 import {NgModule} from "@angular/core";
 import {Footer} from "./footer";
+import {IonicModule} from "ionic-angular";
 
 @NgModule({
     declarations: [
         Footer,
     ],
-    imports: [],
+    imports: [
+        IonicModule.forRoot(Footer),
+    ],
     entryComponents: [
         Footer,
     ],
