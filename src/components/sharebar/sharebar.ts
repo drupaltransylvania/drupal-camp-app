@@ -46,7 +46,46 @@ export class Sharebar {
             }).catch(() => {
             })
         }).catch(() => {
-            console.log('Share via Facebook is not possible!');
+            console.log('Share via Facebook is not supported!');
+        })
+    }
+
+    /**
+     * Shares via Twitter.
+     */
+    shareViaTwitter() {
+        this.socialSharing.canShareVia('twitter').then(() => {
+            this.socialSharing.shareViaTwitter(this.description, this.image, this.url).then(() => {
+            }).catch(() => {
+            })
+        }).catch(() => {
+            console.log('Share via Twitter is not supported!');
+        })
+    }
+
+    /**
+     * Shares via Instagram.
+     */
+    shareViaInstagram() {
+        this.socialSharing.canShareVia('instagram').then(() => {
+            this.socialSharing.shareViaInstagram(this.description, this.image).then(() => {
+            }).catch(() => {
+            })
+        }).catch(() => {
+            console.log('Share via Instagram is not supported!');
+        })
+    }
+
+    /**
+     * Shares via WhatsApp.
+     */
+    shareViaWhatsApp() {
+        this.socialSharing.canShareVia('whatsapp').then(() => {
+            this.socialSharing.shareViaWhatsApp(this.description, this.image, this.url).then(() => {
+            }).catch(() => {
+            })
+        }).catch(() => {
+            console.log('Share via Whatsapp is not supported!');
         })
     }
 
