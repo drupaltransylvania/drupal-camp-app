@@ -152,8 +152,16 @@ ion-list.list {
       }
     }
     p {
-      color: #0f0308;
+      color: #333000;
     }
+  }
+}
+
+ion-card.item ion-card-content,
+ion-card.item-ios ion-card-content {
+  p {
+    color: #333000;
+    line-height: 170%;
   }
 }
 
