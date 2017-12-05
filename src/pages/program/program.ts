@@ -22,6 +22,14 @@ export class ProgramPage {
      */
     sessions: Array<{ id: number, title: string, description: string, short_description: string, time: string, room: string, speaker: string}>;
 
+    /**
+     * Defines constructor for program.
+     *
+     * @param {NavController} navCtrl
+     *   The navigation controller.
+     * @param {NavigationService} navigation
+     *   The navigation service.
+     */
     constructor(public navCtrl: NavController, public navigation: NavigationService) {
         this.sessions = [];
 

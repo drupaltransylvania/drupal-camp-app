@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/core";
-import {NavigationService} from "./navigation";
+import {NavigationService} from "./navigation.services";
 
 @NgModule({
     declarations: [
