@@ -1,6 +1,5 @@
 import {Component, Input} from "@angular/core";
 import {SocialSharing} from "@ionic-native/social-sharing";
-import {Events} from "ionic-angular";
 
 @Component({
     selector: 'dct-sharebar',
@@ -33,8 +32,11 @@ export class Sharebar {
 
     /**
      * Defines constructor for the share bar.
+     *
+     * @param {SocialSharing} socialSharing
+     *   The social sharing extension.
      */
-    constructor(private socialSharing: SocialSharing, private events: Events) {
+    constructor(private socialSharing: SocialSharing) {
     }
 
     /**

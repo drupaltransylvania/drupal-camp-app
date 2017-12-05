@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController} from "ionic-angular";
+import {NavigationService} from "../../services/navigation/navigation.services";
 
 @IonicPage({
     name: 'home-page',
@@ -7,6 +8,7 @@ import {IonicPage, NavController} from "ionic-angular";
 })
 @Component({
     selector: 'page-home',
+    providers: [NavigationService],
     templateUrl: 'home.html'
 })
 /**
@@ -20,7 +22,7 @@ export class HomePage {
      * @param {NavController} navCtrl
      *   The navigation controller.
      */
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController, public navigation: NavigationService) {
     }
 
     /**
@@ -31,7 +33,7 @@ export class HomePage {
      * @param page
      *  The page to navigate to.
      */
-    goToPage(event, page) {
-        this.navCtrl.push(page);
-    }
+    // goToPage(event, page) {
+    //     this.navCtrl.push(page);
+    // }
 }

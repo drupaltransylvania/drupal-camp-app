@@ -1,8 +1,5 @@
 <ion-header>
     <ion-navbar hideBackButton="true">
-        <!--<button ion-button>-->
-            <!--<ion-icon name="menu"></ion-icon>-->
-        <!--</button>-->
         <ion-title>DrupalCamp Transylvania</ion-title>
     </ion-navbar>
 </ion-header>
@@ -20,29 +17,29 @@
         </div>
         <ion-grid class="text">
             <ion-row>
-                <ion-col (tap)="goToPage($event, 'news-page')">
+                <ion-col (tap)="navigation.goToPage($event, 'news-page')">
                     <img src="assets/icon/svg/newspaper-text.svg">
                     <p>News</p>
                 </ion-col>
-                <ion-col (tap)="goToPage($event, 'ListPage')">
+                <ion-col (tap)="navigation.goToPage($event, 'program-page')">
                     <img src="assets/icon/svg/calendar.svg">
                     <p>Program</p>
                 </ion-col>
-                <ion-col (tap)="goToPage($event, 'ListPage')">
+                <ion-col (tap)="navigation.goToPage($event, 'ListPage')">
                     <img src="assets/icon/svg/my-calendar.svg">
                     <p>My schedule</p>
                 </ion-col>
             </ion-row>
             <ion-row>
-                <ion-col (tap)="goToPage($event, 'ListPage')">
+                <ion-col (tap)="navigation.goToPage($event, 'ListPage')">
                     <img src="assets/icon/svg/speakers.svg">
                     <p>Speakers</p>
                 </ion-col>
-                <ion-col (tap)="goToPage($event, 'ListPage')">
+                <ion-col (tap)="navigation.goToPage($event, 'ListPage')">
                     <img src="assets/icon/svg/shake-hands.svg">
                     <p>Social</p>
                 </ion-col>
-                <ion-col (tap)="goToPage($event, 'ListPage')">
+                <ion-col (tap)="navigation.goToPage($event, 'ListPage')">
                     <img src="assets/icon/svg/information-signal.svg">
                     <p>Info</p>
                 </ion-col>

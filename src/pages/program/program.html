@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar hideBackButton="true">
+        <button ion-button (tap)="navigation.goToPage(event, 'home-page')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Program</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<div class="container">
+    <dct-stars></dct-stars>
+    <ion-content padding>
+        <ion-list>
+            <ion-card ion-item *ngFor="let item of sessions" no-border no-margin no-padding>
+                <ion-card-content>
+                    <ion-card-title>
+                        {{item.title}}
+                    </ion-card-title>
+                    <p>{{item.short_description}}</p>
+                    <button ion-button color="dark" (click)="sessionTapped($event, item)">Read more</button>
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+    </ion-content>
+</div>
