@@ -1,61 +1,50 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>DrupalCamp Transylvania</ion-title>
-  </ion-navbar>
+    <ion-navbar hideBackButton="true">
+        <ion-title>DrupalCamp Transylvania</ion-title>
+    </ion-navbar>
 </ion-header>
 
 
 <div class="container">
-  <div class="sky">
-    <div class="stars"></div>
-    <div class="stars1"></div>
-    <div class="stars2"></div>
-    <div class="shooting-stars"></div>
-  </div>
-  <ion-content padding>
-    <div class="homepage-header">
-      <img src="assets/images/homepage-header.png" alt="DrupalCamp Transylvania">
-    </div>
-    <div class="bats">
-      <img src="assets/images/bats.png" alt="DrupalCamp Bats">
-    </div>
-    <ion-grid class="text">
-      <ion-row>
-        <ion-col>
-          <img src="assets/icon/svg/newspaper-text.svg">
-          <p>News</p>
-        </ion-col>
-        <ion-col>
-          <img src="assets/icon/svg/calendar.svg">
-          <p>Program</p>
-        </ion-col>
-        <ion-col>
-          <img src="assets/icon/svg/my-calendar.svg">
-          <p>My schedule</p>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <img src="assets/icon/svg/speakers.svg">
-          <p>Speakers</p>
-        </ion-col>
-        <ion-col>
-          <img src="assets/icon/svg/shake-hands.svg">
-          <p>Social</p>
-        </ion-col>
-        <ion-col>
-          <img src="assets/icon/svg/information-signal.svg">
-          <p>Info</p>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-content>
-  <ion-footer>
-    <div class="footer">
-      <img src="assets/images/footer-background.png" alt="DrupalCamp Bats">
-    </div>
-  </ion-footer>
+    <dct-stars></dct-stars>
+    <ion-content padding>
+        <div class="homepage-header">
+            <img src="assets/images/homepage-header.png"
+                 alt="DrupalCamp Transylvania">
+        </div>
+        <div class="bats">
+            <img src="assets/images/bats.png" alt="DrupalCamp Bats">
+        </div>
+        <ion-grid class="text">
+            <ion-row>
+                <ion-col (tap)="navigation.goToPage($event, 'news-page')">
+                    <img src="assets/icon/svg/newspaper-text.svg">
+                    <p>News</p>
+                </ion-col>
+                <ion-col (tap)="navigation.goToPage($event, 'program-page')">
+                    <img src="assets/icon/svg/calendar.svg">
+                    <p>Program</p>
+                </ion-col>
+                <ion-col (tap)="navigation.goToPage($event, 'ListPage')">
+                    <img src="assets/icon/svg/my-calendar.svg">
+                    <p>My schedule</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col (tap)="navigation.goToPage($event, 'ListPage')">
+                    <img src="assets/icon/svg/speakers.svg">
+                    <p>Speakers</p>
+                </ion-col>
+                <ion-col (tap)="navigation.goToPage($event, 'ListPage')">
+                    <img src="assets/icon/svg/shake-hands.svg">
+                    <p>Social</p>
+                </ion-col>
+                <ion-col (tap)="navigation.goToPage($event, 'ListPage')">
+                    <img src="assets/icon/svg/information-signal.svg">
+                    <p>Info</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+    <dct-footer></dct-footer>
 </div>

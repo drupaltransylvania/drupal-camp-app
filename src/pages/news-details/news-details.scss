@@ -1,0 +1,17 @@
+ion-content {
+  ion-card.item.item-block {
+    width: 90%;
+    margin: 0% 5%;
+    background-color: transparent;
+    .item-inner {
+      padding-right: 0px;
+      ion-label.label {
+        white-space: unset;
+        margin: 0px;
+      }
+      ion-card-content {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}

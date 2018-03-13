@@ -36,6 +36,14 @@ html {
   .bar-button-menutoggle {
     color: #f1f1f1;
   }
+  .toolbar-content {
+    button.button {
+      background-color: transparent;
+      .icon {
+        font-size: 1.6em;
+      }
+    }
+  }
 }
 
 .container {
@@ -48,7 +56,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  .content-ios {
+  .content {
     background: none;
     div.scroll-content {
       padding: 0;
@@ -66,111 +74,139 @@ html {
 }
 
 .menu-inner {
-  .content.content-md, .content.content-ios{
+  .content.content-md, .content.content-ios {
     background-color: inherit;
   }
-  button.item{
-    background-color: rgba(50,16,30, 1);
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border: none;
+  }
+  .list-ios > .item-block:last-child .item-inner, .list-ios > .item-wrapper:last-child .item-block .item-inner {
+    border-bottom: 0.55px solid rgba(200, 199, 204, 0.25);
+  }
+  button.item {
+    background-color: rgba(50, 16, 30, 1);
     color: #fff;
+    .item-inner {
+      padding: 15px 0px 15px 16px;
+      border-bottom: 0.55px solid rgba(200, 199, 204, 0.25);
+    }
   }
 }
 
-// Creates n stars.
-@function create-stars($n) {
-  $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #fcb02a";
-  @for $i from 2 through $n {
-    $stars: "#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #fcb02a";
+page-home {
+  .homepage-header {
+    width: 50%;
+    margin: 10% 0 0 25%;
   }
-
-  @return unquote($stars);
-}
-
-// Defines stars, moving speed and star size.
-@mixin star-template($numStars, $starSize, $scrollSpeed) {
-  z-index: 10;
-  width: $starSize;
-  height: $starSize;
-  border-radius: 50%;
-  background: transparent;
-  box-shadow: create-stars($numStars);
-  animation: animStar $scrollSpeed linear infinite;
-  &:after {
-    content: " ";
-    top: -$starStartOffset;
-    width: $starSize;
-    height: $starSize;
-    border-radius: 50%;
+  .bats {
     position: absolute;
-    background: transparent;
-    box-shadow: create-stars($numStars);
+    top: 25px;
   }
 }
 
-// Defines shooting stars.
-@mixin shooting-star-template($numStars, $starSize, $speed) {
-  z-index: 10;
-  width: $starSize;
-  height: $starSize + 80;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(252, 176, 42, 0), rgba(252, 176, 42, 1));
-  animation: animShootingStar $speed linear infinite;
-}
-
-.stars {
-  @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
-}
-
-.stars1 {
-  @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
-}
-
-.stars2 {
-  @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
-}
-
-.shooting-stars {
-  @include shooting-star-template($numShootingStars, 5px, 10s);
-}
-
-// Animates normal stars.
-@keyframes animStar {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-#{$starFieldHeight}px) translateX(-#{$starFieldWidth}px);
+ion-grid.text.grid {
+  margin: 5%;
+  width: 90%;
+  ion-col {
+    text-align: center;
+    img {
+      width: 30%;
+    }
   }
 }
 
-// Animates shooting stars.
-@keyframes animShootingStar {
-  from {
-    transform: translateY(0px) translateX(0px) rotate(-45deg);
-    opacity: 1;
-    height: 5px;
-    z-index: 0;
-  }
-  to {
-    transform: translateY(-#{$starFieldHeight}px) translateX(-#{$starFieldWidth}px) rotate(-45deg);
-    opacity: 1;
-    height: 800px;
-    z-index: 0;
+ion-navbar {
+  button.back-button {
+    .button-inner {
+      color: white;
+      font-family: Opificio;
+    }
   }
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  img {
-    position: relative;
-    bottom: -5px;
+ion-list.list {
+  ion-card.item {
+    background-color: transparent;
+    padding-left: 0px;
+    margin: 0% 5%;
+    width: 90%;
+    box-shadow: none;
+    ion-label.label {
+      margin-right: 0px;
+      white-space: unset;
+      img {
+        height: 100px;
+      }
+    }
+    .item-inner {
+      padding-right: 0px;
+      border-bottom: none;
+    }
+    ion-card-content {
+      background-color: rgba(255, 255, 255, 0.8);
+      button {
+        height: 2.0em;
+      }
+      ion-card-title {
+        font-weight: bold;
+      }
+    }
+    p {
+      color: #333000;
+    }
   }
 }
 
-ion-content {
-  z-index: 100;
+ion-card.item ion-card-content,
+ion-card.item-ios ion-card-content {
+  p {
+    color: #333000;
+    line-height: 170%;
+  }
+}
+
+.container ion-content.content {
+  margin: 0px;
+  .scroll-content {
+    margin-top: 44px;
+  }
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+  border-bottom: none;
+}
+
+ion-navbar.toolbar {
+  position: relative;
+  display: inline;
+  button {
+    display: inline;
+    float: left;
+  }
+  ion-title {
+    display: inline;
+    float: left;
+    margin: 1rem 0.2rem;
+    padding: 0 1.1em;
+    text-align: center;
+    width: 70%;
+  }
+  button.back-button {
+    margin-top: 0.7rem;
+  }
+}
+
+ion-navbar.toolbar-ios {
+  padding: 4px;
+  min-height: 56px;
+  ion-title {
+    left: initial;
+    top: initial;
+    height: initial;
+    .toolbar-title-ios {
+      padding: 0 12px;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
 }

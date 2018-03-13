@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar hideBackButton="true">
+        <button ion-button (tap)="goToPage(event, 'home-page')">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>News</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<div class="container">
+    <div class="sky">
+        <div class="stars"></div>
+        <div class="stars1"></div>
+        <div class="stars2"></div>
+        <div class="shooting-stars"></div>
+    </div>
+    <ion-content padding>
+        <ion-list>
+            <ion-card ion-item *ngFor="let item of news" no-border no-margin no-padding>
+                <img src={{item.image}}
+                     alt={{item.title}}>
+                <ion-card-content>
+                    <ion-card-title>
+                        {{item.title}}
+                    </ion-card-title>
+                    <p>{{item.short_description}}</p>
+                    <button ion-button color="dark" (click)="newsTapped($event, item)">Read more</button>
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
+    </ion-content>
+</div>
